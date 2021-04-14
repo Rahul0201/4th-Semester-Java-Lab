@@ -44,12 +44,14 @@ public class Main {
             case 3:
                 System.out.println("Enter Patient id :");
                 String ID= scan.nextLine();
-                Hospital.RecordObservations(ID);
+                if(Hospital.RecordObservations(ID)) System.out.println("The operation completed successfully.");
+                else System.err.println("The operation did not complete successfully.");
                 break;
             case 4:
                 System.out.println("Enter Patient id :");
                 ID= scan.nextLine();
-                Hospital.DischargePatient(ID);
+                if(Hospital.DischargePatient(ID)) System.out.println("The operation completed successfully.");
+                else System.err.println("The operation did not complete successfully.");
                 break;
             case 5:
                 System.out.println("\t Doctors : ");
@@ -60,7 +62,7 @@ public class Main {
                 Hospital.ViewAllPatients();
                 break;
             default: System.out.println("\t!!!  Invalid Option  !!! "); 
-            }
+            } 
         } while (choice != 0);    
 
     }
