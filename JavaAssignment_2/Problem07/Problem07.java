@@ -13,7 +13,7 @@ import java.util.LinkedList;
 
 class Buffer{
     private LinkedList<Integer> list ;
-    private static final int size = 15;
+    private static final int size = 10;
 
     Buffer(){list = new LinkedList<>();}
     private boolean isFull(){return list.size() == size;}

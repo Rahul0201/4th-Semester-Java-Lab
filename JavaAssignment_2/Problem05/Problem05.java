@@ -67,7 +67,7 @@ class Bank{
         temp = scan.nextLine().trim();
         fresh.setPhone(temp);
         System.out.println("\nAdd customer ? [y/n]");
-        char choice = Character.toLowerCase(scan.next().charAt(0));
+        char choice = Character.toLowerCase(scan.nextLine().charAt(0));
         if(choice == 'y') {
             fresh.generate_id();
             Accounts.put(fresh.getID(),fresh);
